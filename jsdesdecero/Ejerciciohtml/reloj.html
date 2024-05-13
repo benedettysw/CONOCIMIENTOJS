@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <link rel="stylesheet icon" href="https://cdn.icon-icons.com/icons2/2429/PNG/96/facebook_logo_icon_147291.png">
+</head>
+<body>
+    <style>
+     
+        body {
+    background: linear-gradient(to right, rgb(18, 39, 224), rgb(196, 54, 54));
+}
+
+
+
+
+        h1{
+            position: absolute;
+            color: rgb(255, 255, 255);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+        }
+    </style>
+
+
+    <h1 id="reloj">aqui se muestra la hora</h1>
+
+
+
+
+
+    <script>
+
+        function miguel (){
+
+            let all = new Date()
+
+            let hora = all.getHours();
+
+            let minutos = all.getMinutes()
+
+            let segundos = all.getSeconds()
+
+            let ampm = hora >= 12 ? 'PM' : 'AM'
+
+            hora = hora % 12;
+
+            hora = hora ? hora : 12;
+
+            let todo = `${hora} : ${minutos} : ${segundos}:${ampm}`
+
+            document.getElementById('reloj').innerHTML = todo
+
+
+            setInterval(miguel , 1000)
+
+          
+          
+        }
+
+        miguel()
+       
+
+        
+    </script>
+
+    
+
+
+
+
+
+
+</body>
+</html>

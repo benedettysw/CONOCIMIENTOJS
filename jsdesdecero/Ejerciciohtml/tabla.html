@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabla</title>
+</head>
+
+<body>
+
+
+    <style>
+        body {
+            background-color: black;
+            color: rgb(255, 255, 255);
+        }
+    </style>
+    <label>nombre</label>
+    <input type="text" id="nombre" autocomplete="off">
+    <br>
+    <br>
+    <label>apellido</label>
+
+    <input type="text" id="apellido" autocomplete="off">
+    <button onclick="guardar()">guardar</button>
+
+    <br>
+    <br>
+    <br>
+
+
+    <table>
+        <thead>
+            <tr>
+
+                <th>Id ------- </th>
+
+                <th>Nombre ------- </th>
+                <th>Apellido</th>
+            </tr>
+
+        </thead>
+
+        <tbody id="tabla">
+
+        </tbody>
+    </table>
+
+    <script>
+
+        let row = ""
+
+        let id = 0
+
+
+
+        function guardar() {
+
+          
+
+            let nombre = document.getElementById('nombre');
+
+            let apellido = document.getElementById('apellido');
+
+            let tabla = document.getElementById('tabla');
+
+            id++
+
+           
+
+
+            row += `<tr>
+
+                <td>${id}</td>
+                <td>${nombre.value}</td>
+                <td>${apellido.value}</td>
+
+                </tr>`
+
+
+            tabla.innerHTML = row
+
+
+            Swal.fire({
+                title: "Perfecto",
+                text: "Dato Guardado",
+                icon: "error",
+                timer: 2000
+            });
+
+            
+            
+
+            document.getElementById('nombre').value = "";
+            document.getElementById('apellido').value = "";
+
+
+
+
+        }
+
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</body>
+
+</html>

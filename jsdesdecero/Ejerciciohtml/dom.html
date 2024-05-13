@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <style>
+      body{
+        background: black;
+        color: white;
+}
+em{
+    font-size: 50px;
+}
+
+button{
+    font-size: 30px;
+    cursor: pointer;
+}
+  </style>
+
+
+<h1>HOLA   -- HIJEPUTA</h1>
+<em id="txt"  >Habla careverga</em>
+<br><br>
+
+
+<!-- <button  onclick="tomaEsto()">cambio</button> -->
+<input type="button" onclick="tomaEsto()" value="mostar">
+
+
+
+<script>
+    function tomaEsto(){
+        let x = document.getElementById('txt');
+        x.textContent ="HOLA MUNDO"
+        x.style.color = "red"
+        x.style.fontFamily = "New Roman"
+    }
+    
+</script>
+
+
+
+
+    
+</body>
+</html>

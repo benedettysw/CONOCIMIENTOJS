@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        body{
+            background: black;
+            color: white;
+
+        }
+
+    </style>
+
+    <input type="number"  id="numero" placeholder="numero 1" required>
+    <input type="number"  id="numero2" placeholder="numero 2" required>
+
+    <p id="resultado">AQUI SE MUESTRA EL RESULTADO </p>
+
+    <button onclick="numero()"  >mostrar</button>
+
+
+    <script>
+        function numero(){
+            let n = parseInt(document.getElementById('numero').value);
+            let n2 = parseInt(document.getElementById('numero2').value);
+
+
+            if (n<100){
+                document.getElementById("resultado").innerHTML = "DEBE SER UN NUMERO DE 3 CIFRAS"
+                return;
+            }
+
+            let respuesta1 = n + n2 ;
+
+            document.getElementById('resultado').innerHTML = respuesta1;
+           
+
+
+
+          
+
+
+
+        }
+    </script>
+
+
+
+    
+</body>
+</html>

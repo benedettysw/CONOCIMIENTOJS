@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>suma</title>
+</head>
+<body>
+    <style>
+        body{
+            background: black;
+            color: rgb(255, 255, 255);
+        }
+    </style>
+
+
+    <input type="number" id="n1">
+    <br><br>
+    <input type="number" id="n2">
+
+    <!-- <input type="submit"  onclick="suma()"> -->
+    <button onclick="suma()">resultado</button>
+
+    <p id="resultado">aqui se muestra el resultado</p>
+
+    <script>
+        function suma(){
+            let xn1 = parseInt(document.getElementById('n1').value);
+            let xn2 = parseInt(document.getElementById('n2').value);
+
+
+            if(xn1<100){
+                document.getElementById('resultado').innerHTML = "EL NUMERO DEBER SER DE 3"
+                return;
+            }
+
+
+            let resultado1 = xn1 + xn2
+
+            document.getElementById('resultado').innerHTML = resultado1;
+
+            
+
+
+
+
+
+
+
+        }
+    </script>
+
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>diasemana</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+
+    <input type="date" id="fecha" placeholder="ingresa">
+    <button onclick="mostrar()">mostrar</button>
+    <br>
+    <h1 id="res">aqui se muestra todo--</h1>
+
+
+    <script>
+
+
+        let fechan = prompt("Ingrese la fecha: ", "mm/dd/yyyy");
+
+        let newFecha = new Date(fechan);
+
+        let fecha1 = newFecha.getDay();
+
+        switch (fecha1) {
+            case 0:
+                alert("domingo")
+                break;
+            case 1:
+                alert("lunes")
+                break;
+            case 2:
+                alert("martes")
+                break; 
+            case 3:
+                alert("miercoles")
+                break;
+
+            case 4:
+                alert("jueves")
+                break;
+            case 5:
+                alert("viernes")
+                break;
+            case 6:
+                alert("sabado")
+                break;
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        body {
+            background: black;
+            color: aliceblue;
+        }
+    </style>
+
+    <input type="text" id="dia">
+
+
+    <input type="submit" onclick="mostrar()">
+
+    <script>
+        function mostrar() {
+
+            let dia = document.getElementById('dia').value;
+
+            let reglas = /^[a-zA-Z]+$/;
+
+
+            let mensaje = reglas.test(dia) ? "" : "solo txt"
+
+
+
+            switch (dia.toLowerCase()) {
+                case 'lunes':
+                    mensaje = "es lunes siuuuu";
+                    break;
+
+                case 'martes':
+                    mensaje = "es martes siuuuu";
+                    break;
+
+                case 'miercoles':
+                    mensaje = "es miércoles siuuuu";
+                    break;
+
+                default:
+                    mensaje = "adios";
+
+            }
+            alert(mensaje);
+
+        }
+    </script>
+
+</body>
+
+</html>
